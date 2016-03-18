@@ -1,0 +1,9 @@
+As a user, I want to go to the site to find something to cheer me up
+As a user, I would like to get media files that are customized to my type of mood
+As a user, I would like to see a variety of different types of media
+As a user, I would like to openly talk about what is bothering me to vent and feel better
+As a user, I would like positive reinforcement to assist in changing my mood
+As a user, I would like to add my own images, gifs, videos to express my feelings and to make others feel better
+As a user, I would like to help others feel better
+As a user, I would like to share the media types I enjoyed on other social networks
+As a user, I would like to leave the app feeling better than before getting on the app
