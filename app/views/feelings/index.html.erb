@@ -1,0 +1,18 @@
+<h2>What is wrong?</h2>
+<%= form_tag do %>
+<form class="js-submit" action="/forms" method="post">
+  <form method="get" action="/forms">
+  <select name="feeling_id" id="feeling_id">
+    <tag=:feeling_id, '<option value="1">Sad</option>'>
+    <option value="1">Sad</option>
+    <option value="2">Angry</option>
+    <option value="3">Hopeless</option>
+    <option value="4">Bored</option>
+  </select>
+  </form>
+<% end %>
+<script type="text/javascript">
+  $(".js-submit").on("submit", function(event){
+    event.preventDefault();
+  });
+</script>

@@ -1,0 +1,16 @@
+<h2>Option and Select</h2>
+<%= form_tag do %>
+<form class="js-submit" action="/forms" method="post">
+  <form method="get" action="/forms">
+  <select name="city_id" id="city_id">
+    <tag=:city_id, '<option value="1">Lisbon</option>'>
+    <option value="1">Lisbon</option>
+    <option value="2">Madrid</option>
+  </select>
+  </form>
+<% end %>
+<script type="text/javascript">
+  $(".js-submit").on("submit", function(event){
+    event.preventDefault();
+  });
+</script>
