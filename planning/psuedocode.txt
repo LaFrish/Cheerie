@@ -1,0 +1,49 @@
+Home/Welcome/Index page
+  Wording asking what mood you are in / what is wrong
+  Selection of 6 moods:
+    ==> bored = 1
+    ==> hopeless = 2
+    ==> sad = 3
+    ==> frustrated = 4
+    ==> angry = 5
+    ==> seriously
+
+  When mood is selected you are taken to the index page of that mood:
+    Need folder for each mood
+      Within folder need
+        index.html.erb
+        new.html.erb
+        edit.html.erb
+        show.html.erb
+
+    Need folder with database of
+      media type  - gif
+        file name
+        tag mood
+        tag media type
+        location of file: app/asset/mood/media type
+      media type  - video
+        file name
+        tag mood
+        tag media type
+        location of file: app/asset/mood/media type
+      media type - quotes/images
+        file name
+        tag mood
+        tag media type
+        location of file: app/asset/mood/media type
+
+
+  The mood page will load with:
+    gif reactions of the mood
+    gifs that will change the mood
+    videos to change the mood
+    quotes that will change that mood
+    a text box for the user to talk about what is wrong anonymously
+    a place for the user to upload a gif, video or quote/image to express the mood
+      these will be tagged by mood and media type
+
+  Other users are able to:
+    send virtual hugs
+    share the media
+    upvote
