@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20160321175901) do
     t.integer "feeling_id"
   end
 
+  add_index "posts", ["feeling_id"], name: "index_posts_on_feeling_id", using: :btree
+
   create_table "quotes", force: :cascade do |t|
     t.string  "name"
     t.string  "img_url"

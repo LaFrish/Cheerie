@@ -6,7 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :body
       t.string :data_type
-      t.integer :feeling_id
+      t.integer :feeling_id, index: true, foreign_key: true
     end
   end
 end
