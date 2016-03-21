@@ -1,3 +1,3 @@
 class Feeling < ActiveRecord::Base
-  has_many :type_of_feelings
+  has_many :cheerups
 end

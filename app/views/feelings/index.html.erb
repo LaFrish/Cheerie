@@ -1,1 +1,7 @@
-<h2>What is wrong?</h2>
+<h2>What's wrong?</h2>
+<% @feelings.each do |feeling| %>
+  <div class="feeling">
+    <h2><%= link_to feeling.name, feeling %></h2>
+     <%= image_tag feeling.img_url %>
+  </div>
+<% end %>

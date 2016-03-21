@@ -19,7 +19,7 @@ class FeelingsController < ApplicationController
   end
 
   def edit
-    @feeling = Feeling..find(params[:id])
+    @feeling = Feeling.find(params[:id])
   end
 
   def update
@@ -30,7 +30,7 @@ class FeelingsController < ApplicationController
   end
 
   def destroy
-    @feeling = Feeling..find(params[:id])
+    @feeling = Feeling.find(params[:id])
     @feeling.destroy
 
     redirect_to feelings_path
