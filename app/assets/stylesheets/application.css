@@ -18,7 +18,7 @@ body{
   max-width: 50em;
   margin:auto;
   padding:2em 1em;
-  background-image: url("file:///Users/LaFrish/wdi/projects/project2/cheery/app/assets/images/Cheery_yellow.png");
+  background-image: image-url('Cheery_yellow.png');
 }
 
 nav a {
