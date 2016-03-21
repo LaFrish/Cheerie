@@ -1,4 +1,4 @@
-Home/Welcome/Index page
+Home/Welcome/Index page:
   Wording asking what mood you are in / what is wrong
   Selection of 6 moods:
     ==> bored = 1
@@ -6,7 +6,7 @@ Home/Welcome/Index page
     ==> sad = 3
     ==> frustrated = 4
     ==> angry = 5
-    ==> seriously
+
 
   When mood is selected you are taken to the index page of that mood:
     Need folder for each mood
@@ -41,7 +41,7 @@ Home/Welcome/Index page
     quotes that will change that mood
     a text box for the user to talk about what is wrong anonymously
     a place for the user to upload a gif, video or quote/image to express the mood
-      these will be tagged by mood and media type
+    these will be tagged by mood and media type
 
   Other users are able to:
     send virtual hugs
