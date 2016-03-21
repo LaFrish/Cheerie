@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1><%= link_to "Tun.r", root_url %></h1>
+  <h2>Hello World</h2>
+<p>
+HEEEELLLLLOOOOOOO
+</p>
+  <!-- <h1><%= link_to "Tun.r", root_url %></h1>
   <nav>
     <% if @current_user %>
       <%= link_to "Welcome, #{@current_user.username}!", user_path(@current_user) %>
@@ -22,7 +26,7 @@
   </nav>
   <% flash.each do |type, message| %>
     <p class="<%= type %>"><%= message %></p>
-  <% end %>
+  <% end %> -->
 
 <%= yield %>
 

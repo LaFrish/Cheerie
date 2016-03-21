@@ -1,3 +1,3 @@
-class  < ActiveRecord::Base
-
+class Angry < ActiveRecord::Base
+  belongs_to :feeling
 end

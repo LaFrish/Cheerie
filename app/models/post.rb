@@ -1,3 +1,3 @@
-class  < ActiveRecord::Base
-
+class Post < ActiveRecord::Base
+ belongs_to :feeling
 end
