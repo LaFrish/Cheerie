@@ -42,6 +42,6 @@ class CheerupsController < ApplicationController
 
   private
   def cheerup_params
-    params.require(:cheerup).permit(:name, :photo_url, :nationality)
+    params.require(:cheerup).permit(:name, :img_url, :data_type)
   end
 end
