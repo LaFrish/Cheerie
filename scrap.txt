@@ -1,3 +1,18 @@
+cheerup_data.each_pair do |feeling_name, songs|
+  info = feeling_data[feeling_name]
+  current_feeling = Feeling.create!({
+    name:         info[:name],
+  })
+
+  cheerups.each do |cheerup|
+    Cheerup.create!({
+      title:        cheerup[:title],
+      album:        cheerup[:album],
+      preview_url:  cheerup[:preview_link],
+      artist:       current_feeling
+    })
+
+
 <!-- <h1><%= link_to "Tun.r", root_url %></h1>
 <nav>
   <% if @current_user %>
