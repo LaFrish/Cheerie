@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20160321230638) do
   enable_extension "plpgsql"
 
   create_table "cheerups", force: :cascade do |t|
-    t.string  "feeling_name"
     t.string  "name"
     t.string  "img_url"
     t.string  "data_type"
@@ -27,7 +26,7 @@ ActiveRecord::Schema.define(version: 20160321230638) do
   add_index "cheerups", ["feeling_id"], name: "index_cheerups_on_feeling_id", using: :btree
 
   create_table "feelings", force: :cascade do |t|
-    t.string "feeling_name"
+    t.string "name"
   end
 
   create_table "gifs", force: :cascade do |t|
@@ -41,11 +40,11 @@ ActiveRecord::Schema.define(version: 20160321230638) do
   add_index "gifs", ["feeling_id"], name: "index_gifs_on_feeling_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
-    t.string  "feeling_name"
-    t.string  "img_url"
     t.string  "title"
+    t.string  "img_url"
     t.string  "body"
     t.string  "data_type"
+    t.string  "tag"
     t.integer "feeling_id"
   end
 

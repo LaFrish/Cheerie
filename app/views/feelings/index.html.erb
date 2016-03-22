@@ -1,10 +1,10 @@
  <h2>What is wrong?</h2>
- <%= form_tag do %>
+ <!-- <%= form_tag do %>
      <label> (Pick one of the following)
        <input list="feelings" name="myFeelings" /></label>
        <datalist id="feelings">
          <option value="Bored">Bored</option>
-         <option value="Hopeless">Hopeless</option>
+         <option value="Stressed">Stressed</option>
          <option value="Sad">Sad</option>
          <option value="Frustrated">Frustrated</option>
          <option value="Angry">Angry</option>
@@ -12,4 +12,15 @@
        </datalist>
      </select>
      </form>
+     <% end %> -->
+
+
+
+<h2> <%= link_to @feeling.name, @feelings %></h2>
+
+<%= form_for [@feelings, @cheerup] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
 <% end %>

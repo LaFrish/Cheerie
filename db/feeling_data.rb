@@ -3,8 +3,8 @@ def get_feeling_data
     "bored" => {
                     feeling_name: "Bored"
                   },
-    "hopeless" => {
-                    feeling_name: "Hopeless"
+    "stressed" => {
+                    feeling_name: "Stressed"
                   },
     "sad" => {
                     feeling_name: "Sad"

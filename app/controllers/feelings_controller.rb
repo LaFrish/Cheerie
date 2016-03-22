@@ -38,6 +38,6 @@ class FeelingsController < ApplicationController
 
   private
   def feeling_params
-    params.require(:feeling).permit(:name, :photo_url, :nationality)
+    params.require(:feeling).permit(:name)
   end
 end

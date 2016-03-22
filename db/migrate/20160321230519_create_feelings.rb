@@ -1,7 +1,7 @@
 class CreateFeelings < ActiveRecord::Migration
   def change
     create_table :feelings do |t|
-      t.string :feeling_name
+      t.string :name
     end
   end
 end
