@@ -1,20 +1,15 @@
-<h2>What's wrong?</h2>
-<% @feelings.each do |feeling| %>
-  <div class="feeling">
-    <h2><%= link_to feeling.name, feeling %></h2>
-     <%= image_tag feeling.img_url %>
-  </div>
+ <h2>What is wrong?</h2>
+ <%= form_tag do %>
+     <label> (Pick one of the following)
+       <input list="feelings" name="myFeelings" /></label>
+       <datalist id="feelings">
+         <option value="<%= cheerup_path('Bored')%>">"Bored"</option>
+         <option value="<%= cheerup_path('Hopeless')%>">"Hopeless"</option>
+         <option value="<%= cheerup_path('Sad')%>">"Sad"</option>
+         <option value="<%= cheerup_path('Frustrated')%>">"Frustrated"</option>
+         <option value="<%= cheerup_path('Angry')%>">"Angry"</option>
+         <option value="<%= cheerup_path('SERIOUSLY!')%>">"SERIOUSLY!"</option>
+       </datalist>
+     </select>
+     </form>
 <% end %>
-
-<div class="label_input">
-    <%= f.label(:sample, "Books *", :class => 'label_required_field') %>
-    <%= f.collection_select(:sample, @feelings.all, :id, :name, {:multiple => true, :class => 'selector_box'} )%>
-</div>
-<% end %>
-
-
-<div class="Grid">
-  <div class="Grid-cell">…</div>
-  <div class="Grid-cell">…</div>
-  <div class="Grid-cell">…</div>
-</div>

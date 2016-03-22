@@ -29,3 +29,40 @@ cheerup_data.each_pair do |feeling_name, songs|
 <% flash.each do |type, message| %>
   <p class="<%= type %>"><%= message %></p>
 <% end %> -->
+
+
+<div class="Grid">
+  <div class="Grid-cell">"f"</div>
+  <div class="Grid-cell">"f"</div>
+  <div class="Grid-cell">"f"</div>
+</div>
+
+
+
+ <h2>What is wrong?</h2>
+ <%= form_tag do %>
+ <form class="js-submit" action="/forms" method="post">
+   <form method="get" action="/forms">
+   <select name="feeling_id" id="feeling_id">
+     <tag=:feeling_id>
+      <option value="1">Bored</option>
+      <option value="2">Hopeless</option>
+      <option value="3">Sad</option>
+      <option value="4">Frustrated</option>
+      <option value="5">Angry</option>
+      <option value="6">SERIOUSLY!</option>
+   </select>
+   </form>
+ <% end %>
+ <script type="text/javascript">
+   $(".js-submit").on("submit", function(event){
+     event.preventDefault();
+   });
+ </script>
+
+ <button name="button">Bored</button>
+ <button name="button">Hopeless</button>
+ <button name="button">Sad</button>
+ <button name="button">Frustrated</button>
+ <button name="button">Angry</button>
+ <button name="button">SERIOUSLY!</button>
