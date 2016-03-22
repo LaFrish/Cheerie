@@ -2,10 +2,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @feeling = Feeling.find(params[:feeling_id])
   end
 
   def show
     @post = Post.find(params[:id])
+    @feeling = Feeling.find(params[:feeling_id])
   end
 
   def edit
@@ -14,6 +16,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @feeling = Feeling.find(params[:feeling_id])
   end
 
   def create

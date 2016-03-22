@@ -5,6 +5,7 @@ class CheerupsController < ApplicationController
     @feeling = Feeling.find(params[:feeling_id])
     @gifs = @feeling.cheerups.where(data_type: "gif")
     @imgs = @feeling.cheerups.where(data_type: "img")
+    @posts = @feeling.cheerups.where(data_type: "post")
   end
 
   def new
