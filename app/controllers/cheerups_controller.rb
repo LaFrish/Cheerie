@@ -2,10 +2,14 @@ class CheerupsController < ApplicationController
 
   def index
     @cheerups = Cheerup.all
+    @feeling = Feeling.find(params[:feeling_id])
+    @gifs = @feeling.cheerups.where(data_type: "gif")
+    @imgs = @feeling.cheerups.where(data_type: "img")
   end
 
   def new
     @cheerup = Cheerup.new
+    @feeling = Feeling.find(params[:feeling_id])
   end
 
   def create

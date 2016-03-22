@@ -1,0 +1,11 @@
+<h2> <%= @feeling.name %> </h2>
+<%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %>
+
+
+<% @gifs.each do |gif| %>
+<%= image_tag gif.img_url %>
+<% end %>
+
+<% @imgs.each do |img| %>
+<%= image_tag img.img_url %>
+<% end %>

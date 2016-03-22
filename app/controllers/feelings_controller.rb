@@ -16,6 +16,8 @@ class FeelingsController < ApplicationController
 
   def show
     @feeling = Feeling.find(params[:id])
+    @gifs = @feeling.cheerups.where(data_type: "gif")
+    @imgs = @feeling.cheerups.where(data_type: "img")
   end
 
   def edit

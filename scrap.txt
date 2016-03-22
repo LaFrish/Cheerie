@@ -1,3 +1,7 @@
+
+
+
+
 cheerup_data.each_pair do |feeling_name, songs|
   info = feeling_data[feeling_name]
   current_feeling = Feeling.create!({

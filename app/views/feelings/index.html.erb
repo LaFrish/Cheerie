@@ -1,26 +1,16 @@
- <h2>What is wrong?</h2>
- <!-- <%= form_tag do %>
-     <label> (Pick one of the following)
-       <input list="feelings" name="myFeelings" /></label>
-       <datalist id="feelings">
-         <option value="Bored">Bored</option>
-         <option value="Stressed">Stressed</option>
-         <option value="Sad">Sad</option>
-         <option value="Frustrated">Frustrated</option>
-         <option value="Angry">Angry</option>
-         <option value="SERIOUSLY!">SERIOUSLY!</option>
-       </datalist>
-     </select>
-     </form>
-     <% end %> -->
+<h2>What up?</h2>
 
+<input list="feelings" name="myFeelings" /></label>
+<ul>
+  <% @feelings.each do |feeling| %>
+    <li>
+      <%= link_to feeling.name, feeling %>
+    </li>
+  <% end %>
+</ul>
 
-
-<h2> <%= link_to @feeling.name, @feelings %></h2>
-
-<%= form_for [@feelings, @cheerup] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.submit %>
-<% end %>
+     <script type="text/javascript">
+       $(".js-submit").on("submit", function(event){
+         event.preventDefault();
+       });
+     </script>
