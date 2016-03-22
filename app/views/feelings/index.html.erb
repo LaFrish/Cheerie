@@ -5,3 +5,16 @@
      <%= image_tag feeling.img_url %>
   </div>
 <% end %>
+
+<div class="label_input">
+    <%= f.label(:sample, "Books *", :class => 'label_required_field') %>
+    <%= f.collection_select(:sample, @feelings.all, :id, :name, {:multiple => true, :class => 'selector_box'} )%>
+</div>
+<% end %>
+
+
+<div class="Grid">
+  <div class="Grid-cell">…</div>
+  <div class="Grid-cell">…</div>
+  <div class="Grid-cell">…</div>
+</div>

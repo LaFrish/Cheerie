@@ -100,3 +100,15 @@ span.nationality {
 .notice{
   color:#00f;
 }
+
+.selector_box{
+    overflow: scroll;
+}
+
+.Grid {
+  display: flex;
+}
+
+.Grid-cell {
+  flex: 1;
+}

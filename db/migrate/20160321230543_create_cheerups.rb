@@ -1,7 +1,8 @@
-class CreateTypeOfFeelings < ActiveRecord::Migration
+class CreateCheerups < ActiveRecord::Migration
   def change
-    create_table :type_of_feelings do |t|
+    create_table :cheerups do |t|
       t.string :feeling_name
+      t.string :name
       t.string :img_url
       t.string :data_type
       t.integer :feeling_id, index: true, foreign_key: true

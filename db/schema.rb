@@ -11,14 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321175901) do
+ActiveRecord::Schema.define(version: 20160321230638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "cheerups", force: :cascade do |t|
+    t.string  "feeling_name"
+    t.string  "name"
+    t.string  "img_url"
+    t.string  "data_type"
+    t.integer "feeling_id"
+  end
+
+  add_index "cheerups", ["feeling_id"], name: "index_cheerups_on_feeling_id", using: :btree
+
   create_table "feelings", force: :cascade do |t|
-    t.string "type_of_feelings"
-    t.string "img_url"
+    t.string "feeling_name"
   end
 
   create_table "gifs", force: :cascade do |t|
@@ -28,6 +37,8 @@ ActiveRecord::Schema.define(version: 20160321175901) do
     t.string  "tag"
     t.integer "feeling_id"
   end
+
+  add_index "gifs", ["feeling_id"], name: "index_gifs_on_feeling_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string  "feeling_name"
@@ -48,12 +59,7 @@ ActiveRecord::Schema.define(version: 20160321175901) do
     t.integer "feeling_id"
   end
 
-  create_table "type_of_feelings", force: :cascade do |t|
-    t.string  "feeling_name"
-    t.string  "img_url"
-    t.string  "data_type"
-    t.integer "feeling_id"
-  end
+  add_index "quotes", ["feeling_id"], name: "index_quotes_on_feeling_id", using: :btree
 
   create_table "videos", force: :cascade do |t|
     t.string  "name"
@@ -62,5 +68,7 @@ ActiveRecord::Schema.define(version: 20160321175901) do
     t.string  "tag"
     t.integer "feeling_id"
   end
+
+  add_index "videos", ["feeling_id"], name: "index_videos_on_feeling_id", using: :btree
 
 end

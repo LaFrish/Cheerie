@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'feelings#index'
 
-  get     '/feelings',          to: 'feelings#index'
+    resources :feelings do
+      resources :cheerups
+  end
 end
