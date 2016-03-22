@@ -66,3 +66,10 @@ cheerup_data.each_pair do |feeling_name, songs|
  <button name="button">Frustrated</button>
  <button name="button">Angry</button>
  <button name="button">SERIOUSLY!</button>
+
+ <option value="<%= cheerup_path(:type => 'Bored')%>">"Bored"</option>
+ <option value="<%= cheerup_path(:type => 'Hopeless')%>">"Hopeless"</option>
+ <option value="<%= cheerup_path(:type => 'Sad')%>">"Sad"</option>
+ <option value="<%= cheerup_path(:type => 'Frustrated')%>">"Frustrated"</option>
+ <option value="<%= cheerup_path(:type => 'Angry')%>">"Angry"</option>
+ <option value="<%= cheerup_path(:type => 'SERIOUSLY!')%>">"SERIOUSLY!"</option>
