@@ -1,6 +1,5 @@
 <h2> VENT AWAY <%=link_to @feeling.name, @post %> </h2>
 <%= form_for [@feeling, @cheerup, @post] do |f| %>
-
   <%= f.label :title, "Post Title" %>
   <%= f.text_field :title %>
 

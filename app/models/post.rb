@@ -1,4 +1,4 @@
 class Post < ActiveRecord::Base
   belongs_to :cheerups
-  belongs_to :feeling
+  has_many :tags
 end

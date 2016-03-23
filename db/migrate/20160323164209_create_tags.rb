@@ -1,10 +1,7 @@
-class CreateQuotes < ActiveRecord::Migration
+class CreateTags < ActiveRecord::Migration
   def change
-    create_table :quotes do |t|
+    create_table :tags do |t|
       t.string :name
-      t.string :img_url
-      t.string :data_type
-      t.string :tag
       t.references :feeling, index: true, foreign_key: true
       t.references :cheerup, index: true, foreign_key: true
       t.references :post, index: true, foreign_key: true

@@ -15,6 +15,7 @@ gem 'pry'
 gem 'puma'
 gem 'css3buttons', '~> 1.0', '>= 1.0.1'
 gem 'bootstrap-sass'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'

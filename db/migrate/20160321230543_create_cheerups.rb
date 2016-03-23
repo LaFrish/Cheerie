@@ -4,7 +4,8 @@ class CreateCheerups < ActiveRecord::Migration
       t.string :name
       t.string :img_url
       t.string :data_type
-      t.integer :feeling_id, index: true, foreign_key: true
+      t.string :tag
+      t.references :feeling, index: true, foreign_key: true
     end
   end
 end

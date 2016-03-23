@@ -5,7 +5,9 @@ class CreateGifs < ActiveRecord::Migration
       t.string :img_url
       t.string :data_type
       t.string :tag
-      t.integer :feeling_id, index: true, foreign_key: true
+      t.references :feeling, index: true, foreign_key: true
+      t.references :cheerup, index: true, foreign_key: true
+      t.references :post, index: true, foreign_key: true
     end
   end
 end
