@@ -23,10 +23,10 @@
 
 <section>
 <h1>Section 3</h1>
-  <%= link_to "Create New Post", new_post_path %>
-  <% @posts.each do |post| %>
+  <%= link_to "Create New Post", new_feeling_post_path %>
+  <% @postss.each do |post| %>
     <article>
-      <h2><%= link_to post.title, post_path(post) %></h2>
+      <h2><%= link_to post.title, feeling_post_path(post) %></h2>
       <time>Updated by <%= post.updated_at %></time>
       <p><%= post.body %></p>
     </article>
