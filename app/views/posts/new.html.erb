@@ -1,7 +1,10 @@
 <h2> New Cheerup <%=link_to @feeling.name, @feeling %> </h2>
 <%= form_for [@feeling, @cheerup] do |f| %>
-  <%= f.label :name, "Cheerup Name" %>
-  <%= f.text_field :name %>
+  <%= f.label :title, "Post Title" %>
+  <%= f.text_field :title %>
+
+  <%=f.label :body %>
+  <%=f.text_field :body %>
 
   <%=f.label :img_url %>
   <%=f.text_field :img_url %>

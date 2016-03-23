@@ -1,37 +1,39 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+
+/*@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+@import "sassy-buttons"
+
  *= require_tree .
- *= require_self
- */
-body{
-  font-family:'Helvetica Neue', sans-serif;
+ *= require_self*/
+
+body {
   max-width: 50em;
   margin:auto;
   padding:2em 1em;
-  background: radial-gradient(ellipse farthest-corner at left top, #f35464 30%, #841F4B 100%);
+  background: linear-gradient( -45deg, #f857a6 , #ff5858);
+  left: 50%;
   height: 250vh;
   color: #333;
+  font-family: 'Monoton', cursive;
+  font-size: 40px;
 }
 
-nav a {
-  border: 1px solid black;
-  margin: .5em;
-  padding: .5em;
-  background-color: #eeeeee;
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
+  /*background: linear-gradient( -45deg, #f857a6 , #ff5858);
+  background:linear-gradient(to right,hsla(195,100%,20%,.6),hsla(300,100%,40%,.4));*/
 
 ul {
   list-style-type: none;
+  align-content: center;
 }
 
 li {
@@ -43,21 +45,28 @@ h1 {
   color:inherit;
   letter-spacing:-.05em;
   text-decoration:none;
-  border-bottom:1px solid black;
 }
 
 h2 > a {
   font-size: .75em;
 }
-
-input {
-  display: block;
-  margin: 5px 0 20px 0;
-  padding: 9px;
-  border: solid 1px black;
-  width: 300px;
-  background: whitesmoke;
+ul {
+  float: right;
+  list-style: none;
+  li {
+    float: center;
+    margin-left: 15px;
+  }
 }
+.button {
+  border-radius: 3em;
+  border-color: #f1c40f;
+  color: #58DDAF;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px 0 #f1c40f inset, 0 0 10px 4px #f1c40f;
+  }
 
 input[type=submit],
 a.delete{
@@ -69,25 +78,23 @@ a.delete{
   color: #FFFFFF;
 }
 
-input.delete, a.delete {
-  background-color: red;
+form {
+  background: #3d9970;
 }
 
-.alert{
-  color:#f00;
-}
-.notice{
-  color:#00f;
+section article{
+  border-bottom: 2px solid #aaa;
+  padding: 2em 0;
 }
 
-.selector_box{
-    overflow: scroll;
+section article:last-child{
+  border:none;
 }
 
-.Grid {
-  display: flex;
-}
-
-.Grid-cell {
-  flex: 1;
+label,
+input[type="text"],
+textarea{
+  width:100%;
+  font:inherit;
+  display:block;
 }

@@ -1,15 +1,13 @@
 <h2>What up?</h2>
 
+
 <ul>
   <% @feelings.each do |feeling| %>
-    <li>
-      <%= link_to feeling.name, feeling %>
-    </li>
+<button><%= link_to feeling.name, feeling%></button>
   <% end %>
 </ul>
-
-     <script type="text/javascript">
-       $(".js-submit").on("submit", function(event){
-         event.preventDefault();
-       });
-     </script>
+  <script type="text/javascript">
+    $(".js-submit").on("submit", function(event){
+      event.preventDefault();
+    });
+  </script>

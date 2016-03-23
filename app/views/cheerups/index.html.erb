@@ -1,12 +1,34 @@
+<h2> "cheerup index" </h2>
+
 <h2> <%= @feeling.name %> </h2>
+<h2> "Cheer up show" </h2>
+<%=link_to "Back to Feeling", feeling_path(@feeling) %>
+<%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %>
 
- <%=link_to "Back to Feeling", feeling_path(@feeling) %> </h2>
-
-
+ <div class="container">
+   <section>
+<h1>"Section 1"</h1>
 <% @gifs.each do |gif| %>
 <%= image_tag gif.img_url %>
 <% end %>
+</section>
+</div>
 
+<section>
+<h2>"Section 2"</h1>
 <% @imgs.each do |img| %>
 <%= image_tag img.img_url %>
 <% end %>
+</section>
+
+<section>
+<h1>Section 3</h1>
+  <%= link_to "Create New Post", new_post_path %>
+  <% @posts.each do |post| %>
+    <article>
+      <h2><%= link_to post.title, post_path(post) %></h2>
+      <time>Updated by <%= post.updated_at %></time>
+      <p><%= post.body %></p>
+    </article>
+  <% end %>
+</section>

@@ -1,11 +1,9 @@
-<h2> <%= @feeling.name %> </h2>
-<%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %>
-
-
-<% @gifs.each do |gif| %>
-<%= image_tag gif.img_url %>
-<% end %>
-
-<% @imgs.each do |img| %>
-<%= image_tag img.img_url %>
-<% end %>
+<section>
+  <% @posts.each do |post| %>
+    <article>
+      <h2><%= link_to post.title, post_path(post) %></h2>
+      <time>Updated by <%= post.user.email %> at <%= post.updated_at %></time>
+      <p><%= post.body %></p>
+    </article>
+  <% end %>
+</section>
