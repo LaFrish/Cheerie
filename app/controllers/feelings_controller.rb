@@ -11,10 +11,6 @@ class FeelingsController < ApplicationController
   def create
     @feeling = Feeling.create!(feeling_params)
 
-    existing_tag = Feeling.find_by(feeling_params)
-    unless existing_tag
-      @feeling = Feeling.create!(feeling_params)
-    end
     redirect_to feelings_path(@feeling)
   end
 
