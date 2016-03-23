@@ -1,9 +1,9 @@
-<h2>What up?</h2>
-<ul>
+<h2>index</h2>
+
   <% @feelings.each do |feeling| %>
 <button><%= link_to feeling.name, feeling%></button>
   <% end %>
-</ul>
+
   <script type="text/javascript">
     $(".js-submit").on("submit", function(event){
       event.preventDefault();

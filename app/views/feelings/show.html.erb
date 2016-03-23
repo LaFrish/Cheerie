@@ -1,11 +1,30 @@
 <h2> <%= @feeling.name %> </h2>
+<ul>
+  <li>
 <%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %>
-<%=link_to "Back to Feeling", feeling_path(@feeling) %>
-
+<%= link_to "Create New Feeling", new_feeling_path(@feeling) %>
+<%=link_to "Back to Feeling", feelings_path(@feeling) %>
+</li>
+</ul>
+<div class="container">
+  <section>
+<h1>"Section 1"</h1>
 <% @gifs.each do |gif| %>
 <%= image_tag gif.img_url %>
+  </section>
 <% end %>
+    <section>
+<h1>"other section"</h1>
 
 <% @imgs.each do |img| %>
 <%= image_tag img.img_url %>
+</section>
 <% end %>
+<section>
+<h1>"Posts section"</h1>
+
+<% @postss.each do |post| %>
+<%= link_to feeling_post_path(@post) %>
+</section>
+<% end %>
+</div>

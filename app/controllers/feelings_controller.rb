@@ -11,13 +11,18 @@ class FeelingsController < ApplicationController
   def create
     @feeling = Feeling.create!(feeling_params)
 
-    redirect_to feeling_path(@feeling)
+    existing_tag = Feeling.find_by(feeling_params)
+    unless existing_tag
+      @feeling = Feeling.create!(feeling_params)
+    end
+    redirect_to feelings_path(@feeling)
   end
 
   def show
     @feeling = Feeling.find(params[:id])
     @gifs = @feeling.cheerups.where(data_type: "gif")
     @imgs = @feeling.cheerups.where(data_type: "img")
+    @postss = @feeling.posts.where(data_type: "post")
   end
 
   def edit

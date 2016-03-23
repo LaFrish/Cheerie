@@ -1,9 +1,10 @@
 
 <h2> "feeling new" </h2>
-<h2> New Feeling <%=link_to @feeling.name, @feeling %> </h2>
 <%= form_for [@feeling] do |f| %>
   <%= f.label :name, "What feelz do you want to add?" %>
   <%= f.text_field :name %>
 
   <%=f.submit %>
   <% end %>
+
+<!-- Need to add ability to give tag w the same name as the feeling  -->

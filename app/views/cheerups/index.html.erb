@@ -2,9 +2,11 @@
 
 <h2> <%= @feeling.name %> </h2>
 <h2> "Cheer up show" </h2>
+
+<ul>
 <%=link_to "Back to Feeling", feeling_path(@feeling) %>
 <%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %>
-
+</ul>
  <div class="container">
    <section>
 <h1>"Section 1"</h1>
