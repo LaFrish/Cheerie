@@ -1,19 +1,10 @@
-<h2> VENT AWAY <%=link_to @feeling.name, @post %> </h2>
+<h2> VENT AWAY</h2>
 <%= form_for [@feeling, @cheerup, @post] do |f| %>
   <%= f.label :title, "Post Title" %>
   <%= f.text_field :title %>
 
   <%=f.label :body %>
   <%=f.text_field :body %>
-
-  <%=f.label :img_url %>
-  <%=f.text_field :img_url %>
-
-  <%=f.label :name %>
-  <%=f.text_field :name %>
-
-  <%=f.label :data_type %>
-  <%=f.text_field :data_type %>
 
   <%=f.submit %>
   <% end %>

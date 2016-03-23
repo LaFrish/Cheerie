@@ -12,10 +12,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create!(post_params.merge([:id]))
+    @post = Post.create!(post_params)
     @feeling = Feeling.find(params[:feeling_id])
 
-    redirect_to feeling_cheerups_path(@cheerup)
+    redirect_to feeling_post_path(@post)
   end
 
   def show
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update(post_params.merge([:id]))
     @feeling = Feeling.find(params[:feeling_id])
-    
+
     redirect_to feeling_cheerups_path(@cheerup)
   end
 
@@ -44,6 +44,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :body, :name, :img_url, :data_type)
+    params.require(:post).permit(:title, :body)
   end
 end

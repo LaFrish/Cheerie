@@ -1,10 +1,14 @@
 <h2> <%= @feeling.name %> </h2>
 <ul>
-  <li>
+
 <%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %>
+</br>
 <%= link_to "Create New Feeling", new_feeling_path(@feeling) %>
+</br>
+<%= link_to "Vent abt it", new_feeling_post_path(@feeling) %>
+</br>
 <%=link_to "Back to Feeling", feelings_path(@feeling) %>
-</li>
+</br>
 </ul>
 <div class="container">
   <section>

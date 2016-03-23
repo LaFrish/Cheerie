@@ -89,3 +89,5 @@ seriously3 = Cheerup.create({name: "seriously_3.gif", img_url: "/assets/seriousl
 seriously4 = Cheerup.create({name: "seriously_4.gif", img_url: "/assets/seriously/seriously_4.gif", data_type: "gif", tag: "Seriously", feeling: serious})
 
 seriously5 = Cheerup.create({name: "seriously_5.gif", img_url: "/assets/seriously/seriously_5.gif", data_type: "gif", tag: "Seriously", feeling: serious})
+
+borepost = Post.create({title: "TEST", body: "This is the test of the emergency broadcast system. This is only a test.", img_url: "/assets/bored/bored.gif", data_type: "gif", tag: "Bored"})
