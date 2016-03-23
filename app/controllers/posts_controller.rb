@@ -1,37 +1,37 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
     @feeling = Feeling.find(params[:feeling_id])
-    @postss = @feeling.posts.where(data_type: "post")
+    @posts = Post.all
+    @posts = @feeling.posts.where(data_type: "post")
   end
 
   def new
-    @post = Post.new
     @feeling = Feeling.find(params[:feeling_id])
+    @post = Post.new
   end
 
   def create
-    @post = Post.create!(post_params)
     @feeling = Feeling.find(params[:feeling_id])
+    @post = @feeling.posts.create!(post_params)
 
-    redirect_to feeling_post_path(@post)
+    redirect_to feeling_path(@feeling)
   end
 
   def show
-    @post = Post.find(params[:id])
     @feeling = Feeling.find(params[:feeling_id])
+    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
     @feeling = Feeling.find(params[:feeling_id])
+    @post = Post.find(params[:id])
   end
 
   def update
+    @feeling = Feeling.find(params[:feeling_id])
     @post = Post.find(params[:id])
     @post.update(post_params.merge([:id]))
-    @feeling = Feeling.find(params[:feeling_id])
 
     redirect_to feeling_cheerups_path(@cheerup)
   end

@@ -20,8 +20,9 @@ class TagsController < ApplicationController
   end
 
   def create
-    @post = Post.find(params[:post_id])
     @feeling = Feeling.find(params[:feeling_id])
+    @post = Post.find(params[:post_id])
+
     @cheerup = Cheerup.find_or_create_by(name: params[:cheerup_name])
 
     existing_tag = Tag.find_by(feeling: @feeling, cheerup: @cheerup, post: @post)
@@ -32,20 +33,20 @@ class TagsController < ApplicationController
   end
 
   def show
-    @tag = Tag.find(params[:id])
     @feeling = Feeling.find(params[:feeling_id])
+    @tag = Tag.find(params[:id])
     @tags = @feeling.cheerups.where(:feeling_name])
   end
 
   def edit
-    @tag = Cheerup.find(params[:id])
     @feeling = Feeling.find(params[:feeling_id])
+    @tag = Cheerup.find(params[:id])
   end
 
   def destroy
+    @feeling = Feeling.find(params[:feeling_id])
     @tag = Tag.find(params[:id])
     @tag.destroy
-    @feeling = Feeling.find(params[:feeling_id])
     @cheerup = Cheerup.find(params[:cheerup_id])
     @post = Post.find(params[:post_id])
 
