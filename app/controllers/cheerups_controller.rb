@@ -1,4 +1,4 @@
-class CheerupsController < ApplicationController
+ class CheerupsController < ApplicationController
 
   def index
     @cheerups = Cheerup.all
@@ -17,15 +17,15 @@ class CheerupsController < ApplicationController
     @cheerup = Cheerup.create!(cheerup_params)
     @feeling = Feeling.find(params[:feeling_id])
 
-    redirect_to feeling_cheerups_path(@cheerup)
+    redirect_to feeling_cheerup_path(@feeling)
   end
 
   def show
     @cheerup = Cheerup.find(params[:id])
     @feeling = Feeling.find(params[:feeling_id])
-    @gifs = @feeling.cheerups.where(data_type: "gif")
-    @imgs = @feeling.cheerups.where(data_type: "img")
-    @postss = @feeling.posts.where(data_type: "post")
+    @gifs = @feeling.cheerup.where(data_type: "gif")
+    @imgs = @feeling.cheerup.where(data_type: "img")
+    @postss = @feeling.post.where(data_type: "post")
   end
 
   def edit
@@ -38,7 +38,7 @@ class CheerupsController < ApplicationController
     @cheerup.update(cheerup_params)
     @feeling = Feeling.find(params[:feeling_id])
 
-    redirect_to feeling_cheerups_path(@cheerup)
+    redirect_to feeling_cheerup_path(@cheerup)
   end
 
   def destroy
@@ -46,7 +46,7 @@ class CheerupsController < ApplicationController
     @cheerup.destroy
     @feeling = Feeling.find(params[:feeling_id])
 
-    redirect_to feeling_cheerups_path(@cheerup)
+    redirect_to feeling_cheerup_path(@cheerup)
   end
 
   private
