@@ -3,9 +3,9 @@
   def index
     @cheerups = Cheerup.all
     @feeling = Feeling.find(params[:feeling_id])
-    # @gifs = @feeling.cheerups.where(data_type: "gif")
-    # @imgs = @feeling.cheerups.where(data_type: "img")
-    # @postss = @feeling.posts.where(data_type: "post")
+    @gifs = @feeling.cheerups.where(data_type: "gif")
+    @imgs = @feeling.cheerups.where(data_type: "img")
+    @posts = @feeling.posts.where(data_type: "post")
   end
 
   def new
@@ -17,7 +17,7 @@
     @cheerup = Cheerup.create!(cheerup_params)
     @feeling = Feeling.find(params[:feeling_id])
 
-    redirect_to feeling_cheerup_path(@feeling)
+    redirect_to feeling_cheerups_path(@feeling)
   end
 
   def show

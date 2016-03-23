@@ -27,8 +27,9 @@
 <section>
 <h1>"Posts section"</h1>
 
-<% @postss.each do |post| %>
+<% @posts.each do |post| %>
 <%= link_to feeling_post_path(@post) %>
+<%= image_tag img.img_url %>
 </section>
 <% end %>
 </div>

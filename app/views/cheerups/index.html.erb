@@ -14,7 +14,7 @@
 <%= image_tag gif.img_url %>
 <% end %>
 </section>
-</div>
+
 
 <section>
 <h2>"Section 2"</h1>
@@ -24,13 +24,22 @@
 </section>
 
 <section>
-<h1>Section 3</h1>
-  <%= link_to "Create New Post", new_feeling_post_path %>
-  <% @postss.each do |post| %>
+<h1>POSTS</h1>
+  <% @posts.each do |post| %>
     <article>
-      <h2><%= link_to post.title, feeling_post_path(post) %></h2>
-      <time>Updated by <%= post.updated_at %></time>
+      <h2><%= link_to post.title, post %></h2>
       <p><%= post.body %></p>
     </article>
   <% end %>
 </section>
+
+<section>
+  <% @posts.each do |post| %>
+    <article>
+      <h2><%= link_to post.title, post %></h2>
+      <p><%= post.body %></p>
+    </article>
+  <% end %>
+</section>
+
+</div>
