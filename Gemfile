@@ -7,14 +7,12 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'sassy-buttons', '~> 0.2.6'
+gem 'lightbox2-rails'
 gem 'rails_12factor', group: :production
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sqlite3'
 gem 'pry'
 gem 'puma'
-gem 'css3buttons', '~> 1.0', '>= 1.0.1'
-gem 'bootstrap-sass'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

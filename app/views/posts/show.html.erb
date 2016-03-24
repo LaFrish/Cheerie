@@ -1,10 +1,9 @@
 <h2> "post show" </h2>
 
 <section>
-  <% @posts.each do |post| %>
-    <article>
-      <h2><%= link_to post.title, feeling_post_path(@post) %></h2>
-      <p><%= post.body %></p>
-    </article>
-  <% end %>
+<h3>Posts</h3>
+<% @feeling.posts.each do |post| %>
+<h3><%= link_to post.title, feeling_post_path(@feeling, post) %></h3>
+<p><%= post.body %></p>
+<% end %>
 </section>

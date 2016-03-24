@@ -1,4 +1,4 @@
-<h2>index</h2>
+<h2> How are you feeling? </h2>
 
   <% @feelings.each do |feeling| %>
 <button><%= link_to feeling.name, feeling%></button>
@@ -9,3 +9,4 @@
       event.preventDefault();
     });
   </script>
+    <h2> Not seeing your mood? <%= link_to "Add it here!", new_feeling_path(@feeling)%></h2>
