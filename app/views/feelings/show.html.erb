@@ -11,21 +11,33 @@
 </br>
 </ul>
 <div class="container">
-  <section>
-    <h1>"Section 1"</h1>
-    <% @gifs.each do |gif| %>
-      <%= image_tag gif.img_url %>
-    <% end %>
-  </section>
-  <section>
-    <h1>"other section"</h1>
+   <section>
+     <h2>Gifs</h2>
+     <% @gifs.each do |gif| %>
+       <%= image_tag gif.img_url %>
+       <% end %>
+     </section>
 
+   <section>
+    <h2>Images</h2>
     <% @imgs.each do |img| %>
-      <%= image_tag img.img_url %>
+    <%= img.name %>
+    <%= image_tag img.img_url %>
     <% end %>
   </section>
+
   <section>
-    <h1>"Posts section"</h1>
+    <h1>POSTS</h1>
+    <% @posts.each do |post| %>
+    <article>
+      <h2><%= link_to post.title, post %></h2>
+      <p><%= post.body %></p>
+      <% end %>
+    </article>
+  </section>
+
+  <section>
+    <h2>"Posts section"</h2>
     <% @feeling.posts.each do |post| %>
       <h2><%= link_to post.title, feeling_post_path(@feeling, post) %></h2>
     <% end %>

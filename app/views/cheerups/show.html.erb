@@ -4,37 +4,29 @@
 <%=link_to "Back to Feeling", feeling_path(@feeling) %>
 <%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %>
 </ul>
- <div class="container">
+<div class="container">
    <section>
-<h1>"Section 1"</h1>
-<% @gifs.each do |gif| %>
-<%= image_tag gif.img_url %>
-<% end %>
-</section>
+     <h2>Gifs</h2>
+     <% @gifs.each do |gif| %>
+       <%= image_tag gif.img_url %>
+       <% end %>
+     </section>
+
+   <section>
+    <h2>Images</h2>
+    <% @imgs.each do |img| %>
+    <%= img.name %>
+    <%= image_tag img.img_url %>
+    <% end %>
+  </section>
+
+  <section>
+    <h1>POSTS</h1>
+    <% @posts.each do |post| %>
+    <article>
+      <h2><%= link_to post.title, post %></h2>
+      <p><%= post.body %></p>
+      <% end %>
+    </article>
+  </section>
 </div>
-
-<section>
-<h2>"Section 2"</h1>
-<% @imgs.each do |img| %>
-<%= image_tag img.img_url %>
-<% end %>
-</section>
-
-<section>
-<h1>Section 3</h1>
-
-</section>
-
-
-<h2> <%= @feeling.name %> </h2>
-
- </h2>
-
-
-<% @gifs.each do |gif| %>
-<%= image_tag gif.img_url %>
-<% end %>
-
-<% @imgs.each do |img| %>
-<%= image_tag img.img_url %>
-<% end %>
