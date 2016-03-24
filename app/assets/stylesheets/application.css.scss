@@ -3,20 +3,22 @@
 
  /**= require_tree .
  *= require_self*/
- // *= require lightbox
+
 
 body {
   line-height: 1.5;
   max-width: 50em;
   margin:auto;
   padding:2em 1em;
-  background: linear-gradient( -45deg, #f857a6 , #ff5858);
+  background: radial-gradient( ellipse farthest-corner at center, #f1c40f , #ff5858);
   left: 50%;
   height: 250vh;
-  color: #333;
-  font-family: 'Satisfy', sans-serif;
   font-size: 40px;
-  color: #ff5858;
+  font-weight: lighter;
+  color: white;
+  background-attachment: fixed;
+  align-content: center;
+  text-align: center;
 }
   // background: url("/assets/Cheery_yellow.png");
 // background: radial-gradient(ellipse farthest-corner at left top, #f35464 30%, #841F4B 100%);
@@ -24,27 +26,68 @@ body {
 // color: #333;
 
 h1 {
-    font-family: 'Satisfy', sans-serif;
-    font-size: 200px;
+    font-family: 'Monoton', sans-serif;
+    font-weight: lighter;
+    font-size: 150px;
     text-align: center;
-    color: #f91791;
+    color: #00000;
+    text-shadow: black 0.1em 0.1em 0.2em;
     margin-top: 0px;
+
 }
 
 h2 {
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 50px;
+  color: #C22E75;
+  text-align: center;
+  align-items: center;
+}
+
+h3 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 75px;
+  color: #f1c40f ;
+  align-items: center;
+  text-align: center;
+}
+
+h4 {
   font-family: 'Playfair Display', sans-serif;
   font-size: 25px;
   color: #2ebfc2;
 }
+
+p {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 25px;
+  color: #2ebfc2;
+}
+
+a {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 25px;
+  color: #C22E75;
+}
+  a:link {color:#C22E75; background-color:transparent; text-decoration:none}
+  a:visited {color:#38787a; background-color:transparent; text-decoration:none}
+  a:hover   {color:#f91791; background-color:transparent; text-decoration:none}
+
+
 section {
-  background-color: #000000 80%;
+  align-content: center;
+  background-color: white;
+  background-position: center;
   color: #ff5858;
-  width: 1000px;
+  width: 800px;
+  position: center;
   padding: 10px;
   margin: 10px 10px 10px 10px;
   border: 2px solid black;
   border-radius: 10px;
-  position: center;
+  -moz-box-shadow: 1px 1px 3px 2px #f00ea4;
+  -webkit-box-shadow: 1px 1px 3px 2px #f00ea4;
+  box-shadow:         1px 1px 3px 2px #f00ea4;
 }
 
 label {
@@ -75,28 +118,32 @@ form {
 }
 
 form {
-  background: rgba(#474747, .8);
+  background: rgba(#f1c40f, .9);
   width: 50%;
   height: 100%;
   padding: 25px;
   position: absolute;
   top: 0;
   left: 0;
+
 }
 
 input {
-  background: rgba(#FFF, .15);
+  background: rgba(#FFF, .80);
   width: 100%;
   padding: 8px;
   margin: 15px 0;
   border: none;
   border-radius: 3px;
   outline: none;
-  color: red;
-  font-size: 20px;
+  font-family: 'Abril Fatface', sans-serif;
+  font-size: 25px;
+  color: #C22E75;
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 500px lighten(#474747, 20%) inset;
     -webkit-text-fill-color: #FFF;
+
+
   }
 }
 
@@ -134,25 +181,24 @@ input {
 
 button {
   font-family: 'Vidaloka', serif;
-  width: 125px;
-  height: 50px;
+  width: 150px;
+  height:75x;
+  vertical-align: middle;
+  text-align: center;
   font-size: 16px;
   border-radius: .5em;
   border-color: #f91791;
-  color: #f1c40f;
+  color: #C22E75;
   box-shadow: 0 0 40px 40px #f1c40f inset, 0 0 0 0 #ff5858;
   transition: all 150ms ease-in-out;
-  // transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out;
-
-  // &:hover {
-  //   box-shadow: 0 0 40px 40px #ff5858 inset;
-  // }
 
  &:hover {
    box-shadow: 0 0 10px 0 #ff5858 inset, 0 0 10px 0 #ff5858;
  }
 }
-// <div style="-moz-box-shadow: 1px 1px 3px 2px #f00ea4;
-//   -webkit-box-shadow: 1px 1px 3px 2px #f00ea4;
-//   box-shadow:         1px 1px 3px 2px #f00ea4;">
-// Div content here</div>
+
+// transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out;
+
+// &:hover {
+//   box-shadow: 0 0 40px 40px #ff5858 inset;
+// }

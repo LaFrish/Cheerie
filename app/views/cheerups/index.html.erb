@@ -1,21 +1,22 @@
-<h2> "cheerup index" </h2>
-<h3> Feeling <%= @feeling.name %> </h3>
+<h2> You are feeling <%= @feeling.name %> </h2>
+<h2> Well let's see if we can fix that!</h2>
 
-<%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %></br>
-<%= link_to "Create New Feeling", new_feeling_path(@feeling) %></br>
-<%= link_to "Vent abt it", new_feeling_post_path(@feeling) %></br>
-<%= link_to "Back to Feeling", feelings_path(@feeling) %></br>
+
+<button><%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %></button>
+<button><%= link_to "Create New Feeling", new_feeling_path(@feeling) %></button>
+<button><%= link_to "Vent abt it", new_feeling_post_path(@feeling) %></button>
+<button><%= link_to "Back to Feeling", feelings_path(@feeling) %></button>
 
 <div class="container">
   <section>
-    <h3>Gifs</h3>
+    <h3>Giftastic</h3>
     <% @gifs.each do |gif| %>
       <%= image_tag gif.img_url %>
       <% end %>
     </section>
 
     <section>
-    <h3>Images</h3>
+    <h3>Quotes and such</h3>
     <% @imgs.each do |img| %>
       <%= img.name %>
       <%= image_tag img.img_url %>
@@ -23,7 +24,7 @@
     </section>
 
     <section>
-    <h3>Posts</h3>
+    <h3>Talk it out on VentPost!</h3>
     <% @feeling.posts.each do |post| %>
     <h3><%= link_to post.title, feeling_post_path(@feeling, post) %></h3>
     <p><%= post.body %></p>
