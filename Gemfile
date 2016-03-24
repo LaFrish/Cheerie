@@ -9,7 +9,6 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'pry'
 gem 'puma'
 gem 'uglifier', '>= 1.3.0'
@@ -40,5 +39,5 @@ group :development do
   gem 'spring'
 
   gem 'rails_12factor', group: :production
-  
+
 end

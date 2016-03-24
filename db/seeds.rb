@@ -24,25 +24,29 @@ frustratetag = Tag.create({name: "Frustrated"})
 angertag = Tag.create({name: "Angry"})
 serioustag = Tag.create({name: "Seriously"})
 
-boredimg = Cheerup.create({name: "bored_img2.jpg", img_url: "/assets/bored/bored_img2.jpg", data_type: "img", tag: "Bored", feeling: bore})
+boredimg = Cheerup.create({name: "bored_img1.jpg", img_url: "/assets/bored/bored_img1.jpg", data_type: "img", tag: "Bored"})
 
-bored1img = Cheerup.create({name: "bored_img2.jpg", img_url: "/assets/bored/bored_img2.jpg", data_type: "img", tag: "Bored", feeling: bore})
+boredimg1 = Cheerup.create({name: "bored_img2.jpg", img_url: "/assets/bored/bored_img2.jpg", data_type: "img", tag: "Bored"})
 
-stressimg = Cheerup.create({name: "stressed_img2.jpg", img_url: "/assets/stressed/stressed_img2.jpg", data_type: "img", tag: "Bored", feeling: bore})
+frustratedimg = Cheerup.create({name: "frustrated_img1.jpg", img_url: "/assets/frustrated/frustrated_img1.jpg", data_type: "img", tag: "Frustrated"})
 
-stress1img = Cheerup.create({name: "stressed_img1.jpg", img_url: "/assets/stressed/stressed_img1.jpg", data_type: "img", tag: "Bored", feeling: bore})
+frustratedimg1 = Cheerup.create({name: "frustrated_img2.jpg", img_url: "/assets/frustrated/frustrated_img2.jpg", data_type: "img", tag: "Frustrated"})
 
-sadimg = Cheerup.create({name: "sad_img1.jpg", img_url: "/assets/sad/sad_img1.jpg", data_type: "img", tag: "Sad", feeling: bore})
+stressimg = Cheerup.create({name: "stressed_img2.jpg", img_url: "/assets/stressed/stressed_img2.jpg", data_type: "img", tag: "Stressed"})
 
-sad1img = Cheerup.create({name: "sad_img2.jpg", img_url: "/assets/sad/sad_img2.jpg", data_type: "img", tag: "Sad", feeling: bore})
+stressimg1 = Cheerup.create({name: "stressed_img1.jpg", img_url: "/assets/stressed/stressed_img1.jpg", data_type: "img", tag: "Stressed"})
 
-angerimg = Cheerup.create({name: "angry_img1.jpg", img_url: "/assets/angry/angry_img1.jpg", data_type: "img", tag: "Sad", feeling: bore})
+sadimg = Cheerup.create({name: "sad_img1.jpg", img_url: "/assets/sad/sad_img1.jpg", data_type: "img", tag: "Sad"})
 
-anger1img = Cheerup.create({name: "angry_img2.jpg", img_url: "/assets/angry/angry_img2.jpg", data_type: "img", tag: "Sad", feeling: bore})
+sadimg1 = Cheerup.create({name: "sad_img2.jpg", img_url: "/assets/sad/sad_img2.jpg", data_type: "img", tag: "Sad"})
 
-serious1img = Cheerup.create({name: "seriously_img2.jpg", img_url: "/assets/seriously/seriously_img2.jpg", data_type: "img", tag: "seriously", feeling: bore})
+angerimg = Cheerup.create({name: "angry_img1.jpg", img_url: "/assets/angry/angry_img1.jpg", data_type: "img", tag: "Angry"})
 
-seriousimg = Cheerup.create({name: "seriously_img1.jpg", img_url: "/assets/seriously/seriously_img1.jpg", data_type: "img", tag: "seriously", feeling: bore})
+angerimg1 = Cheerup.create({name: "angry_img2.jpg", img_url: "/assets/angry/angry_img1.jpg", data_type: "img", tag: "Angry"})
+
+seriousimg = Cheerup.create({name: "seriously_img2.jpg", img_url: "/assets/seriously/seriously_img2.jpg", data_type: "img", tag: "Seriously"})
+
+seriousimg = Cheerup.create({name: "seriously_img1.jpg", img_url: "/assets/seriously/seriously_img1.jpg", data_type: "img", tag: "seriously"})
 
 bored1 = Cheerup.create({name: "bored.gif", img_url: "/assets/bored/bored.gif", data_type: "gif", tag: "Bored", feeling: bore})
 
