@@ -1,28 +1,24 @@
-== README
+Welcome to Cheerie!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Do you need a little pick me up to turn your frown upside down? Welp, you are luck because bc Cheerie is the app that brightens your day.
 
-Things you may want to cover:
+I have a folder included in the git to show my planning process. I also researched things that psychologically make people happy. For example, yellow and pink make people happy so I used those two colors together in the background.
 
-* Ruby version
+I initially did a model to model method with feelings to cheerups but then I incorporated posts from users to add some interactivity. I later tried adding tags as another model but had to put that on the back burner due to time constraints.
 
-* System dependencies
+File versions:
+Ruby  2.2.4
+Rails 4.2.5
+Puma
+rails_12factor
 
-* Configuration
+Deployed app on Heroku. (Link provided above by title)
 
-* Database creation
+To use:
+Once you are on the home page, you are asked how you are feeling. You have the option of adding a new feeling if your current mood isn't listed.
 
-* Database initialization
+Once you select your your mood, you go to a page customized by the selected mood. The gifs, quotes and posts are all related to that mood and to make you feel better.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+You have the ability to:
+Post about your feelings.
+Create a cheerup (gif or image) to help cheer your fellow users up.
