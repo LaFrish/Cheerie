@@ -4,7 +4,6 @@
  /**= require_tree .
  *= require_self*/
 
-
 body {
   line-height: 1.5;
   max-width: 50em;
@@ -17,8 +16,6 @@ body {
   font-weight: lighter;
   color: white;
   background-attachment: fixed;
-  align-content: center;
-  text-align: center;
 }
 
 h1 {
@@ -29,7 +26,6 @@ h1 {
     color: #00000;
     text-shadow: black 0.1em 0.1em 0.2em;
     margin-top: 0px;
-
 }
 
 h2 {
@@ -55,6 +51,8 @@ h4 {
 }
 
 p {
+  vertical-align: middle;
+  text-align: center;
   font-family: 'Playfair Display', sans-serif;
   font-size: 25px;
   color: #2ebfc2;
@@ -73,10 +71,10 @@ a {
   vertical-align: middle;
 }
 
-
 section {
   vertical-align: middle;
   align-content: center;
+  text-align: center;
   background-color: white;
   background-position: center;
   color: #ff5858;
@@ -117,16 +115,6 @@ form {
     }
   }
 }
-
-// form {
-//   background: rgba(#f1c40f, .9);
-//   width: 50%;
-//   height: 100%;
-//   padding: 25px;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-// }
 
 input {
   background: rgba(#FFF, .80);
