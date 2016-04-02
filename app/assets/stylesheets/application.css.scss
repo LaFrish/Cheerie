@@ -4,6 +4,7 @@
  /**= require_tree .
  *= require_self*/
 
+
 body {
   line-height: 1.5;
   max-width: 50em;
@@ -16,16 +17,18 @@ body {
   font-weight: lighter;
   color: white;
   background-attachment: fixed;
+  align-content: center;
+  text-align: center;
 }
 
 h1 {
-    font-family: 'Monoton', sans-serif;
-    font-weight: lighter;
-    font-size: 150px;
-    text-align: center;
-    color: #00000;
-    text-shadow: black 0.1em 0.1em 0.2em;
-    margin-top: 0px;
+  font-family: 'Monoton', sans-serif;
+  font-weight: lighter;
+  font-size: 150px;
+  text-align: center;
+  color: #00000;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin-top: 0px;
 }
 
 h2 {
@@ -51,8 +54,6 @@ h4 {
 }
 
 p {
-  vertical-align: middle;
-  text-align: center;
   font-family: 'Playfair Display', sans-serif;
   font-size: 25px;
   color: #2ebfc2;
@@ -71,14 +72,12 @@ a {
   vertical-align: middle;
 }
 
+
 section {
-  vertical-align: middle;
-  align-content: center;
-  text-align: center;
   background-color: white;
   background-position: center;
   color: #ff5858;
-  width: 800px;
+  min-width: 500px;
   position: center;
   padding: 10px;
   margin: 10px 10px 10px 10px;
@@ -116,6 +115,16 @@ form {
   }
 }
 
+// form {
+//   background: rgba(#f1c40f, .9);
+//   width: 50%;
+//   height: 100%;
+//   padding: 25px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
 input {
   background: rgba(#FFF, .80);
   width: 100%;
@@ -136,8 +145,8 @@ input {
 button {
   display: inline-block;
   font-family: 'Vidaloka', serif;
-  width: 150px;
-  height:75x;
+  width: 200px;
+  height: 75px;
   vertical-align: middle;
   text-align: center;
   font-size: 16px;
