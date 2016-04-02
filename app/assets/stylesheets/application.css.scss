@@ -20,10 +20,6 @@ body {
   align-content: center;
   text-align: center;
 }
-  // background: url("/assets/Cheery_yellow.png");
-// background: radial-gradient(ellipse farthest-corner at left top, #f35464 30%, #841F4B 100%);
-// height: 100vh;
-// color: #333;
 
 h1 {
     font-family: 'Monoton', sans-serif;
@@ -75,6 +71,7 @@ a {
 
 
 section {
+  vertical-align: middle;
   align-content: center;
   background-color: white;
   background-position: center;
@@ -117,16 +114,15 @@ form {
   }
 }
 
-form {
-  background: rgba(#f1c40f, .9);
-  width: 50%;
-  height: 100%;
-  padding: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-}
+// form {
+//   background: rgba(#f1c40f, .9);
+//   width: 50%;
+//   height: 100%;
+//   padding: 25px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
 
 input {
   background: rgba(#FFF, .80);
@@ -146,6 +142,7 @@ input {
 }
 
 button {
+  display: inline-block;
   font-family: 'Vidaloka', serif;
   width: 150px;
   height:75x;
