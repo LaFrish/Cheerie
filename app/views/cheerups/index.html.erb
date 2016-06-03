@@ -3,7 +3,6 @@
 
 
 <button><%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %></button>
-<button><%= link_to "Create New Feeling", new_feeling_path(@feeling) %></button>
 <button><%= link_to "Vent abt it", new_feeling_post_path(@feeling) %></button>
 <button><%= link_to "Back to Feeling", feelings_path(@feeling) %></button>
 
@@ -25,6 +24,7 @@
 
     <section>
     <h3>Talk it out on VentPost!</h3>
+    <button><%= link_to "Add a vent!", new_feeling_post_path(@feeling) %></button>
     <% @feeling.posts.each do |post| %>
     <h3><%= link_to post.title, feeling_post_path(@feeling, post) %></h3>
     <p><%= post.body %></p>

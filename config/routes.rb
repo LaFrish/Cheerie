@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :feelings do
     resources :cheerups
     resources :posts
-    # resources :tags
+    resources :tags
   end
 end
