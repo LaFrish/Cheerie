@@ -12,6 +12,9 @@
     <% @gifs.each do |gif| %>
       <%= image_tag gif.img_url %>
       <% end %>
+    </br>
+      <button><%= link_to "Add A Gif", new_feeling_cheerup_path(@feeling) %></button>
+
     </section>
 
     <section>
@@ -20,14 +23,18 @@
       <%= img.name %>
       <%= image_tag img.img_url %>
       <% end %>
+    </br>
+      <button><%= link_to "Add A Quote", new_feeling_cheerup_path(@feeling) %></button>
     </section>
 
     <section>
     <h3>Talk it out on VentPost!</h3>
-    <button><%= link_to "Add a vent!", new_feeling_post_path(@feeling) %></button>
+
     <% @feeling.posts.each do |post| %>
     <h3><%= link_to post.title, feeling_post_path(@feeling, post) %></h3>
     <p><%= post.body %></p>
     <% end %>
+  </br>
+  <button><%= link_to "Add a vent!", new_feeling_post_path(@feeling) %></button>
   </section>
 </div>

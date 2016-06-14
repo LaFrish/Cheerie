@@ -1,11 +1,12 @@
 <h2> You are feeling <%= @feeling.name %> </h2>
 <h2> Well let's see if we can fix that!</h2>
 
+<button><%= link_to "Home", feelings_path(@feeling) %></button>
+<button><%= link_to "Add a gif or image", new_feeling_cheerup_path(@feeling) %></button>
+<button><%= link_to "Vent about it", new_feeling_post_path(@feeling) %></button>
 
-<button><%= link_to "Create New Cheerup", new_feeling_cheerup_path(@feeling) %></button>
-<button><%= link_to "Create New Feeling", new_feeling_path(@feeling) %></button>
-<button><%= link_to "Vent abt it", new_feeling_post_path(@feeling) %></button>
-<button><%= link_to "Back to Feeling", feelings_path(@feeling) %></button>
+<button><%= link_to "Edit Feeling", edit_feeling_path(@feeling) %></button>
+
 
 <div class="container">
   <section>
@@ -13,6 +14,8 @@
     <% @gifs.each do |gif| %>
       <%= image_tag gif.img_url %>
       <% end %>
+    </br>
+      <button><%= link_to "Add a gif", new_feeling_cheerup_path(@feeling) %></button>
     </section>
 
     <section>
@@ -20,6 +23,8 @@
     <% @imgs.each do |img| %>
       <%= image_tag img.img_url %>
       <% end %>
+    </br>
+      <button><%= link_to "Add a quote", new_feeling_cheerup_path(@feeling) %></button>
     </section>
 
     <section>
@@ -28,5 +33,9 @@
     <h3><%= link_to post.title, feeling_post_path(@feeling, post) %></h3>
     <p><%= post.body %></p>
     <% end %>
+  </br>
+  <button><%= link_to "Vent about it", new_feeling_post_path(@feeling) %></button>
   </section>
+
+  <button><%= link_to "Back to home", feelings_path(@feeling) %></button>
 </div>

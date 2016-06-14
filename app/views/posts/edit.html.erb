@@ -1,0 +1,9 @@
+<%= form_for [@feeling, @cheerup, @post] do |f| %>
+  <%= f.label :title, "Post Title" %>
+  <%= f.text_field :title %>
+
+  <%=f.label :body %>
+  <%=f.text_field :body %>
+
+  <%=f.submit %>
+  <% end %>

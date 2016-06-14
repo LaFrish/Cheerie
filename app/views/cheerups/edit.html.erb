@@ -1,1 +1,19 @@
 <h2> "Cheer up edit" </h2>
+<%= form_for [@feeling, @cheerup] do |f| %>
+  <%= f.label :name, "Cheerup Name" %>
+  <%= f.text_field :name %>
+
+  <%=f.label :img_url %>
+  <%=f.text_field :img_url %>
+
+  <%=f.label :data_type, "gif or img" %>
+    <%=f.text_field :data_type %>
+
+  <!-- <%=f.check_box :data_type %>
+  <%=f.check_box :data_type %> -->
+
+  <!-- <%=f.label :tag %>
+  <%=f.text_field :tag %> -->
+
+  <%=f.submit %>
+  <% end %>

@@ -6,4 +6,6 @@
 <h3><%= link_to post.title, feeling_post_path(@feeling, post) %></h3>
 <p><%= post.body %></p>
 <% end %>
+<%= link_to "Edit Image", edit_feeling_post_path(@feeling, post)%>
+<%= link_to "Delete Image", feeling_post_path(@feeling, post),  method: :delete %>
 </section>
