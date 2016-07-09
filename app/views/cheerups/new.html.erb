@@ -1,15 +1,21 @@
 <h2> New Cheerup <%=link_to @feeling.name, @feeling %> </h2>
 <%= form_for [@feeling, @cheerup] do |f| %>
+<div class="close"></div>
+<i class="fa-fa-times-circle-o"></i>
+
   <%= f.label :name, "Cheerup Name" %>
   <%= f.text_field :name %>
 
   <%=f.label :img_url, "URL" %>
   <%=f.text_field :img_url %>
 
-  <%= check_box_tag(data_type: "gif") %>
-  <%= label_tag(:data_type, "gif") %>
+  <%=f.label :data_type, "Enter gif or image" %>
+      <%=f.text_field :data_type %>
+
+  <!-- <%= check_box_tag(data_type: "gif") %>
+  <%= f.label :data_type, "gif" %>
   <%= check_box_tag(data_type: "img") %>
-  <%= label_tag(:pet_cat, "image") %>
+  <%= f.label :data_type, "image" %> -->
 
   <%=f.submit %>
   <% end %>
